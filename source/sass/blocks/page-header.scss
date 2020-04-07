@@ -1,21 +1,20 @@
 
-// ------------------------------------------------------------------------- //
-// PAGE-HEADER
-// ------------------------------------------------------------------------- //
-
 .page-header__wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding-top: 11px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 15px;
+}
+
+.page-haeder__logo-block {
+    padding: 10px 54px 10px 20px;
 }
 
 .page-header__toggle {
-    width: 25px;
-    height: 19px;
+    width: 24px;
+    height: 18px;
+    margin: 10px 20px 10px 10px;
     background: url('/img/icon-mobile-menu.svg');
     text-indent: -9999px;
+    overflow: hidden;
 }

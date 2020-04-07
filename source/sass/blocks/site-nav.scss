@@ -1,0 +1,24 @@
+.site-nav {
+    width: 100%;
+    display: none;
+}
+
+.site-nav__list {
+    list-style: none;
+    padding: 0;
+}
+
+.site-nav__item {
+    padding: 24px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid $grey-color;
+
+    &:first-child {
+        border-top: 1px solid $grey-color;
+    }
+}
+
+.site-nav__link {
+    text-decoration: none;
+}
