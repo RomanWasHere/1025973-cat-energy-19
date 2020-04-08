@@ -1,22 +1,23 @@
 // ------------------------------------------ //
 // 01 IMPORTS COMMON
 // ------------------------------------------ //
-@import 'normalize.scss';
-@import 'visually-hidden.scss';
-@import 'fonts.scss';
-@import 'variables.scss';
+@import "normalize.scss";
+@import "visually-hidden.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "buttons.scss";
 
 // ------------------------------------------ //
 // 02 IMPORTS BLOCKS
 // ------------------------------------------ //
-@import 'blocks/page-header.scss';
-@import 'blocks/site-nav.scss';
-@import 'blocks/hero.scss';
-@import 'blocks/programs.scss';
+@import "blocks/page-header.scss";
+@import "blocks/site-nav.scss";
+@import "blocks/hero.scss";
+@import "blocks/programs.scss";
 
 // ------------------------------------------ //
 // 03 STYLES
 // ------------------------------------------ //
 body {
-    font-family: 'oswald-regular', Helvetica, Arial, sans-serif;
+  font-family: "oswald-regular", "Helvetica", "Arial", sans-serif;
 }
