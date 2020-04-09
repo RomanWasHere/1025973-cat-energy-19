@@ -5,6 +5,7 @@
 @import "visually-hidden.scss";
 @import "fonts.scss";
 @import "variables.scss";
+@import "mixins.scss";
 @import "buttons.scss";
 
 // ------------------------------------------ //
@@ -14,10 +15,15 @@
 @import "blocks/site-nav.scss";
 @import "blocks/hero.scss";
 @import "blocks/programs.scss";
+@import "blocks/features.scss";
 
 // ------------------------------------------ //
 // 03 STYLES
 // ------------------------------------------ //
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "oswald-regular", "Helvetica", "Arial", sans-serif;
 }
