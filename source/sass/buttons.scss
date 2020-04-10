@@ -9,4 +9,13 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.button--disabled {
+  background-color: $grey-color;
+  color: $dark-grey-color-2;
+  pointer-events: none;
+  cursor: not-allowed;
 }

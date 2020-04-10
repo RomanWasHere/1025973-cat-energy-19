@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="/css/style.css" rel="stylesheet">
 </head>
@@ -11,23 +12,23 @@
 
     <header class="page-header">
         <div class="page-header__wrapper">
-            <a class="page-header__logo page-header__image--icon" href="#">
-                <img class="page-header__image" src="https://via.placeholder.com/75x75" alt="Логотип Кэт Энерджи">
-            </a>
-            <a class="page-header__logo page-header__image--text" href="#">
-                <img class="page-header__image" src="https://via.placeholder.com/75x75" alt="Логотип Кэт Энерджи">
-            </a>
-            <button type="button" class="main-nav__toggle">Открыть меню</button>
-            <nav class="main-nav">
-                <ul class="main-nav__list">
-                    <li class="main-nav__item">
-                        <a class="main-nav__link" href="index.html">Главная</a>
+            <div class="page-haeder__logo-block">
+                <a class="page-header__logo page-header__image--icon" href="#">
+                    <img class="page-header__image" width="191" height="39" src="/img/logo-mobile.svg"
+                        alt="Логотип Кэт Энерджи">
+                </a>
+            </div>
+            <button type="button" class="page-header__toggle">Открыть меню</button>
+            <nav class="site-nav site-nav--closed">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html">Главная</a>
                     </li>
-                    <li class="main-nav__item main-nav__item--activе">
-                        <a class="main-nav__link">Каталог продукции</a>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__item--activе">Каталог продукции</a>
                     </li>
-                    <li class="main-nav__item">
-                        <a class="main-nav__link" href="form.html">Подбор программы</a>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="form.html">Подбор программы</a>
                     </li>
                 </ul>
             </nav>
@@ -38,15 +39,15 @@
         <h1 class="visually-hidden">Функциональное питание для котов</h1>
 
         <section class="main-catalog">
-            <h2 class="main-catalog__title">Каталог продукции</h2>
             <div class="main-catalog__wrapper">
+                <h2 class="main-catalog__title">Каталог продукции</h2>
                 <ul class="main-catalog__list">
                     <li class="main-catalog__item">
                         <article class="product">
                             <div class="product__wrapper">
                                 <a class="product__link-image" href="#">
-                                    <img class="product__image" src="https://via.placeholder.com/100x100"
-                                        alt="Изображение продукта Кэт Энерджи">
+                                    <img class="product__image" width="140" height="144"
+                                        src="/img/chicken-small-mobile@1x.jpg" alt="Изображение продукта Кэт Энерджи">
                                 </a>
                                 <div class="product__description-wrapper">
                                     <h3 class="product__title">
@@ -71,16 +72,16 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="product__button" type="button">Заказать</button>
                             </div>
+                            <button class="button product__button" type="button">Заказать</button>
                         </article>
                     </li>
                     <li class="main-catalog__item">
                         <article class="product">
                             <div class="product__wrapper">
                                 <a class="product__link-image" href="#">
-                                    <img class="product__image" src="https://via.placeholder.com/100x100"
-                                        alt="Изображение продукта Кэт Энерджи">
+                                    <img class="product__image" width="140" height="144"
+                                        src="/img/chicken-big-mobile@1x.jpg" alt="Изображение продукта Кэт Энерджи">
                                 </a>
                                 <div class="product__description-wrapper">
                                     <h3 class="product__title">
@@ -100,21 +101,21 @@
                                             </tr>
                                             <tr class="product__row">
                                                 <td class="product__data product__data--property">Цена</td>
-                                                <td class="product__data product__data--alue">1000 Р.</td>
+                                                <td class="product__data product__data--value">1000 Р.</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="product__button" type="button">Заказать</button>
                             </div>
+                            <button class="button product__button" type="button">Заказать</button>
                         </article>
                     </li>
                     <li class="main-catalog__item">
                         <article class="product">
                             <div class="product__wrapper">
                                 <a class="product__link-image" href="#">
-                                    <img class="product__image" src="https://via.placeholder.com/100x100"
-                                        alt="Изображение продукта Кэт Энерджи">
+                                    <img class="product__image" width="140" height="144"
+                                        src="/img/fish-small-mobile@1x.jpg" alt="Изображение продукта Кэт Энерджи">
                                 </a>
                                 <div class="product__description-wrapper">
                                     <h3 class="product__title">
@@ -130,7 +131,7 @@
                                             </tr>
                                             <tr class="product__row">
                                                 <td class="product__data product__data--property">Вкус</td>
-                                                <td class="product__data product__data--__value">Рыба</td>
+                                                <td class="product__data product__data--value">Рыба</td>
                                             </tr>
                                             <tr class="product__row">
                                                 <td class="product__data product__data--property">Цена</td>
@@ -139,16 +140,16 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="product__button" type="button">Заказать</button>
                             </div>
+                            <button class="button product__button" type="button">Заказать</button>
                         </article>
                     </li>
                     <li class="main-catalog__item">
                         <article class="product">
                             <div class="product__wrapper">
                                 <a class="product__link-image" href="#">
-                                    <img class="product__image" src="https://via.placeholder.com/100x100"
-                                        alt="Изображение продукта Кэт Энерджи">
+                                    <img class="product__image" width="140" height="144"
+                                        src="/img/fish-big-mobile@1x.jpg" alt="Изображение продукта Кэт Энерджи">
                                 </a>
                                 <div class="product__description-wrapper">
                                     <h3 class="product__title">
@@ -168,21 +169,21 @@
                                             </tr>
                                             <tr class="product__row">
                                                 <td class="product__data product__data--property">Цена</td>
-                                                <td class="product__data product__data--alue">1000 Р.</td>
+                                                <td class="product__data product__data--value">1000 Р.</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="product__button" type="button">Заказать</button>
                             </div>
+                            <button class="button product__button" type="button">Заказать</button>
                         </article>
                     </li>
                     <li class="main-catalog__item">
                         <article class="product">
                             <div class="product__wrapper">
                                 <a class="product__link-image" href="#">
-                                    <img class="product__image" src="https://via.placeholder.com/100x100"
-                                        alt="Изображение продукта Кэт Энерджи">
+                                    <img class="product__image" width="140" height="144"
+                                        src="/img/buckwheat-small-mobile@1x.jpg" alt="Изображение продукта Кэт Энерджи">
                                 </a>
                                 <div class="product__description-wrapper">
                                     <h3 class="product__title">г
@@ -207,32 +208,32 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="product__button" type="button">Заказать</button>
                             </div>
+                            <button class="button product__button" type="button">Заказать</button>
                         </article>
                     </li>
                     <li class="main-catalog__item">
                         <article class="product">
                             <div class="product__wrapper">
                                 <a class="product__link-image" href="#">
-                                    <img class="product__image" src="https://via.placeholder.com/100x100"
-                                        alt="Изображение продукта Кэт Энерджи">
+                                    <img class="product__image" width="140" height="144"
+                                        src="/img/buckwheat-big-mobile@1x.jpg" alt="Изображение продукта Кэт Энерджи">
                                 </a>
                                 <div class="product__description-wrapper">
                                     <h3 class="product__title">
                                         <a class="product__link" href="#">Cat Energy
-                                            Slim 1000 г
+                                            Slim 700 г
                                         </a>
                                     </h3>
                                     <table class="product__table">
                                         <tbody>
                                             <tr class="product__row">
                                                 <td class="product__data product__data--property">Объем</td>
-                                                <td class="product__data product__data--value">1000</td>
+                                                <td class="product__data product__data--value">700</td>
                                             </tr>
                                             <tr class="product__row">
                                                 <td class="product__data product__data--property">Вкус</td>
-                                                <td class="product__data product__data--value">Курица</td>
+                                                <td class="product__data product__data--value">Гречка</td>
                                             </tr>
                                             <tr class="product__row">
                                                 <td class="product__data product__data--property">Цена</td>
@@ -241,16 +242,16 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="product__button" type="button">Заказать</button>
                             </div>
+                            <button class="button product__button" type="button">Заказать</button>
                         </article>
                     </li>
                     <li class="main-catalog__item">
                         <article class="product">
                             <div class="product__wrapper">
                                 <a class="product__link-image" href="#">
-                                    <img class="product__image" src="https://via.placeholder.com/100x100"
-                                        alt="Изображение продукта Кэт Энерджи">
+                                    <img class="product__image" width="140" height="144"
+                                        src="/img/rice-small-mobile@1x.jpg" alt="Изображение продукта Кэт Энерджи">
                                 </a>
                                 <div class="product__description-wrapper">
                                     <h3 class="product__title">
@@ -275,15 +276,15 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="product__button" type="button">Заказать</button>
                             </div>
+                            <button class="button product__button" type="button">Заказать</button>
                         </article>
                     </li>
                     <li class="main-catalog__item">
-                        <article class="product">
-                            <h3 class="product__title">Показать еще 100500 товаров</h3>
-                            <p class="product__text">На самом деле вкусов гораздо больше!</p>
-                            <button class="product__button product__button--secondary" type="button">Показать
+                        <article class="product product--more">
+                            <h3 class="product__title product__title--centered">Показать еще 100500 товаров</h3>
+                            <p class="product__text product__text--centered">На самом деле вкусов гораздо больше!</p>
+                            <button class="button button--disabled product__button" type="button">Показать
                                 все</button>
                         </article>
                     </li>
@@ -368,30 +369,34 @@
 
     <footer class="page-footer">
         <div class="page-footer__wrapper">
-            <div class="contacts page-footer__contacts">
+            <section class="contacts page-footer__contacts">
                 <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
                 <address class="contacts__text">
                     ул. Большая Конюшенная 19/8 <br> Санкт-Петербург
                 </address>
                 <iframe class="contacts__map" src="https://via.placeholder.com/300x300" frameborder="0"></iframe>
-            </div>
+            </section>
             <a class="page-footer__logo" href="#">
-                <img class="page-footer__image" src="https://via.placeholder.com/75x75" alt="Логотип Кэт Энерджи">
+                <img class="page-footer__image" width="128" height="24" src="/img/logo-footer.svg"
+                    alt="Логотип Кэт Энерджи">
             </a>
-            <div class="socials page-footer__socials">
+            <section class="socials page-footer__socials">
                 <ul class="socials__list">
                     <li class="socials__item"><a href="#" class="socials__link socials__link--vk">Вконтаке</a></li>
                     <li class="socials__item"><a href="#" class="socials__link socials__link--instagram">Инстаграм</a>
                     </li>
                     <li class="socials__item"><a href="#" class="socials__link socials__link--facebook">Фейсбук</a></li>
                 </ul>
-            </div>
-            <div class="page-footer__copyright">
+            </section>
+            <section class="page-footer__copyright">
                 <a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
-                <img class="page-footer__image" src="https://via.placeholder.com/50x50" alt="Логотип HTML Academy">
-            </div>
+                <img class="page-footer__image" width="27" height="34" src="/img/htmlacademy.svg"
+                    alt="Логотип HTML Academy">
+            </section>
         </div>
     </footer>
+
+    <script src="/js/mobile-toggle.js"></script>
 
 </body>
 

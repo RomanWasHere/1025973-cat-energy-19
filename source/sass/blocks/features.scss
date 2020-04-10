@@ -16,39 +16,40 @@
 .features__item {
   display: flex;
   position: relative;
+  align-items: center;
 
   &::before {
     content: "";
-    position: absolute;
-    display: inline-block;
+    position: relative;
+    flex-shrink: 0;
     width: 60px;
     height: 60px;
-    top: 20px;
-    left: 5px;
-    z-index: 1;
+    margin-right: 20px;
+    background-color: $green-color;
+    background-position: center;
   }
 
   &--consistency {
     &::before {
-      background: url("/img/advantage-leaf@1x.png");
+      background-image: url("/img/advantage-leaf@1x.png");
     }
   }
 
   &--package {
     &::before {
-      background: url("/img/advantage-powder@1x.png");
+      background-image: url("/img/advantage-powder@1x.png");
     }
   }
 
   &--usage {
     &::before {
-      background: url("/img/advantage-dining@1x.png");
+      background-image: url("/img/advantage-dining@1x.png");
     }
   }
 
   &--result {
     &::before {
-      background: url("/img/advantage-clock@1x.png");
+      background-image: url("/img/advantage-clock@1x.png");
     }
   }
 }
@@ -58,14 +59,4 @@
   color: $dark-grey-color-2;
   font-size: 14px;
   line-height: 18px;
-
-  &::before {
-    content: "";
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-    background-color: $green-color;
-  }
 }

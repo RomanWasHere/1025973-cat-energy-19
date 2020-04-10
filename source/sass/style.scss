@@ -1,5 +1,5 @@
 // ------------------------------------------ //
-// 01 IMPORTS COMMON
+// 01 COMMON
 // ------------------------------------------ //
 @import "normalize.scss";
 @import "visually-hidden.scss";
@@ -9,13 +9,18 @@
 @import "buttons.scss";
 
 // ------------------------------------------ //
-// 02 IMPORTS BLOCKS
+// 02 BLOCKS
 // ------------------------------------------ //
 @import "blocks/page-header.scss";
 @import "blocks/site-nav.scss";
 @import "blocks/hero.scss";
 @import "blocks/programs.scss";
 @import "blocks/features.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/contacts.scss";
+@import "blocks/socials.scss";
+@import "blocks/main-catalog.scss";
+@import "blocks/product.scss";
 
 // ------------------------------------------ //
 // 03 STYLES

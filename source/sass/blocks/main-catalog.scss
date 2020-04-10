@@ -1,0 +1,20 @@
+.main-catalog__title {
+  font-size: 36px;
+  line-height: 1.6;
+  font-weight: normal;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-catalog__list {
+  @include list-style-reset;
+}
+
+.main-catalog__item {
+  border-bottom: 1px solid $grey-color;
+  padding-bottom: 24px;
+
+  &:first-child {
+    border-top: 1px solid $grey-color;
+  }
+}
