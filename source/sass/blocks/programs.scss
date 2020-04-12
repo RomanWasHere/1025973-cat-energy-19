@@ -1,64 +1,74 @@
+.programs__wrapper {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .programs__list {
   @include list-style-reset;
 }
 
-.programs__wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
+.programs__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .program {
-  padding: 22px 20px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
   background-color: $grey-color;
-
-  &:first-child {
-    margin-top: 20px;
-  }
 }
 
 .program__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
   margin-top: 0;
+  padding-left: 70px;
+  font-weight: normal;
   font-size: 24px;
   line-height: 1.5;
   text-transform: uppercase;
-  position: relative;
 
   &::before {
-    content: "";
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    margin-right: 20px;
     background-color: $green-color;
-    top: 15px;
+    border-radius: 50%;
+    content: "";
   }
 
   &::after {
-    content: "";
     position: absolute;
-    display: inline-block;
     z-index: 1;
+    display: inline-block;
+    content: "";
   }
 
   &--slim {
     &::after {
+      top: 0;
+      left: 9px;
       width: 35px;
       height: 49px;
-      left: 9px;
-      top: 14px;
       background: url("/img/icon-cat-slim.svg");
     }
   }
 
   &--pro {
     &::after {
+      top: 10px;
+      left: -9px;
       width: 67px;
       height: 28px;
-      left: -9px;
-      top: 26px;
       background: url("/img/icon-cat-pro.svg");
     }
   }
@@ -66,12 +76,13 @@
 
 .program__description {
   @include arial-font;
-  border-bottom: 1px solid $dark-grey-color-1;
-  padding-bottom: 22px;
+  margin-top: 0;
   margin-bottom: 20px;
-  color: $dark-grey-color-2;
+  padding-bottom: 22px;
   font-size: 14px;
   line-height: 18px;
+  color: $dark-grey-color-2;
+  border-bottom: 1px solid $dark-grey-color-1;
 }
 
 .program__link {
@@ -83,8 +94,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 6px;
-    right: -36px;
+    top: 4px;
+    left: 100px;
     width: 25px;
     height: 12px;
     background: url("/img/icon-right-arrow-long.svg");

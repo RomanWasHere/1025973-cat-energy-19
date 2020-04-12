@@ -1,16 +1,15 @@
 // ------------------------------------------ //
-// 01 COMMON
+// 01 GLOBAL
 // ------------------------------------------ //
-@import "normalize.scss";
-@import "visually-hidden.scss";
-@import "fonts.scss";
-@import "variables.scss";
-@import "mixins.scss";
-@import "buttons.scss";
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
 
 // ------------------------------------------ //
 // 02 BLOCKS
 // ------------------------------------------ //
+@import "blocks/button.scss";
+@import "blocks/visually-hidden.scss";
 @import "blocks/page-header.scss";
 @import "blocks/site-nav.scss";
 @import "blocks/hero.scss";
@@ -23,9 +22,16 @@
 @import "blocks/product.scss";
 
 // ------------------------------------------ //
-// 03 STYLES
+// 03 LIBRARIES
 // ------------------------------------------ //
-* {
+@import "libs/normalize.scss";
+
+// ------------------------------------------ //
+// 04 STYLES
+// ------------------------------------------ //
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

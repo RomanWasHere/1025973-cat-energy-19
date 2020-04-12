@@ -1,12 +1,14 @@
 .features__wrapper {
-  padding-left: 20px;
+  padding-top: 20px;
   padding-right: 20px;
+  padding-left: 20px;
 }
 
 .features__title {
+  margin-top: 0;
+  font-weight: normal;
   font-size: 36px;
   line-height: 1.6;
-  font-weight: normal;
 }
 
 .features__list {
@@ -14,19 +16,20 @@
 }
 
 .features__item {
-  display: flex;
   position: relative;
+  display: flex;
   align-items: center;
+  margin-bottom: 20px;
 
   &::before {
-    content: "";
-    position: relative;
+    position: absolute;
+    top: 0;
     flex-shrink: 0;
     width: 60px;
     height: 60px;
-    margin-right: 20px;
     background-color: $green-color;
     background-position: center;
+    content: "";
   }
 
   &--consistency {
@@ -52,11 +55,18 @@
       background-image: url("/img/advantage-clock@1x.png");
     }
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .features__description {
   @include arial-font;
-  color: $dark-grey-color-2;
+  min-height: 60px;
+  margin: 0;
+  padding-left: 80px;
   font-size: 14px;
   line-height: 18px;
+  color: $dark-grey-color-2;
 }
