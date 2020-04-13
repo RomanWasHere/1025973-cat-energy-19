@@ -11,7 +11,7 @@
   margin-top: 0;
   font-weight: normal;
   font-size: 36px;
-  line-height: 60px;
+  line-height: 1.6;
 }
 
 .features__list {
@@ -73,6 +73,6 @@
   @include arial-font;
   margin: 0;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.3;
   color: $darker-grey-color;
 }
