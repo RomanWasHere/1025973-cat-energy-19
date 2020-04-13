@@ -1,0 +1,22 @@
+.button {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 12px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $white-color;
+  background-color: $primary-color;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--disabled {
+    color: $darker-grey-color;
+    background-color: $grey-color;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}

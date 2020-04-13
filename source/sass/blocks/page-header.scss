@@ -1,0 +1,24 @@
+.page-header {
+  border-bottom: 1px solid $grey-color;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-haeder__logo-block {
+  padding: 10px 54px 10px 20px;
+}
+
+.page-header__toggle {
+  width: 24px;
+  height: 18px;
+  margin: 10px 20px 10px 10px;
+  background: url("/img/icon-mobile-menu.svg");
+  text-indent: -9999px;
+  border: none;
+  overflow: hidden;
+}
