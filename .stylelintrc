@@ -9,6 +9,7 @@
     "declaration-no-important": true,
     "indentation": [2, {"ignore": ["inside-parens"]}],
     "order/properties-order": [
+      "content",
       "position",
       "top",
       "right",
