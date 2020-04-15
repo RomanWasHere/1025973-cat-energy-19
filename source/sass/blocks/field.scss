@@ -1,0 +1,19 @@
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.field__input {
+  flex-grow: 1;
+  margin-left: 16px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.1;
+  border: 1px solid $grey-darker-color;
+  text-transform: uppercase;
+}
+
