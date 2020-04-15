@@ -295,19 +295,19 @@
         <section class="extra-catalog">
             <h2 class="extra-catalog__title">Дополнительные товары</h2>
             <div class="extra-catalog__wrapper">
-                <ul class="extr-catalog__list">
+                <ul class="extra-catalog__list">
                     <li class="extra-catalog__item">
                         <article class="extra-product">
                             <h3 class="extra-product__title">Сахарозаменитель</h3>
                             <table class="extra-product__table">
                                 <tbody>
                                     <tr class="extra-product__row">
-                                        <td class="extra-product__data">1 упаковка (100 г)</td>
-                                        <td class="extra-product__data">200 Р.</td>
+                                        <td class="extra-product__amount">1 упаковка (100 г)</td>
+                                        <td class="extra-product__price">200 Р.</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <button class="extra-product__button">Заказать</button>
+                            <button class="button extra-product__button ">Заказать</button>
                         </article>
                     </li>
                     <li class="extra-catalog__item">
@@ -316,12 +316,12 @@
                             <table class="extra-product__table">
                                 <tbody>
                                     <tr class="extra-product__row">
-                                        <td class="extra-product__data">5 литров</td>
-                                        <td class="extra-product__data">50 Р.</td>
+                                        <td class="extra-product__amount">5 литров</td>
+                                        <td class="extra-product__price">50 Р.</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <button class="extra-product__button">Заказать</button>
+                            <button class="button extra-product__button">Заказать</button>
                         </article>
                     </li>
                     <li class="extra-catalog__item">
@@ -330,12 +330,12 @@
                             <table class="extra-product__table">
                                 <tbody>
                                     <tr class="extra-product__row">
-                                        <td class="extra-product__data">1 литр</td>
-                                        <td class="extra-product__data">100 Р.</td>
+                                        <td class="extra-product__amount">1 литр</td>
+                                        <td class="extra-product__price">100 Р.</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <button class="extra-product__button">Заказать</button>
+                            <button class="button extra-product__button">Заказать</button>
                         </article>
                     </li>
                     <li class="extra-catalog__item">
@@ -344,12 +344,12 @@
                             <table class="extra-product__table">
                                 <tbody>
                                     <tr class="extra-product__row">
-                                        <td class="extra-product__data">1 упаковка (30 г)</td>
-                                        <td class="extra-product__data">300 Р.</td>
+                                        <td class="extra-product__amount">1 упаковка (30 г)</td>
+                                        <td class="extra-product__price">300 Р.</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <button class="extra-product__button">Заказать</button>
+                            <button class="button extra-product__button">Заказать</button>
                         </article>
                     </li>
                 </ul>
@@ -360,7 +360,7 @@
             <div class="gift__wrapper">
                 <a class="gift__link" href="#">
                     <h2 class="visually-hidden">Специальное предложение</h2>
-                    <p>Закажите все и получите чехол для кота в подарок!</p>
+                    <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
                 </a>
             </div>
         </article>
@@ -370,11 +370,21 @@
     <footer class="page-footer">
         <div class="page-footer__wrapper">
             <section class="contacts page-footer__contacts">
-                <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
-                <address class="contacts__text">
-                    ул. Большая Конюшенная 19/8 <br> Санкт-Петербург
-                </address>
-                <iframe class="contacts__map" src="https://via.placeholder.com/300x300" frameborder="0"></iframe>
+                <div class="contacts__info-block">
+                    <p class="contacts__title">
+                        приглашаем<br>
+                        к сотрудничеству<br>
+                        дилеров!
+                    </p>
+                    <address class="contacts__text">
+                        ул. Большая<br>
+                        Конюшенная 19/8<br>
+                        Санкт-Петербург
+                    </address>
+                </div>
+                <div class="contacts__map-block">
+                    <iframe class="contacts__map" src="" frameborder="0"></iframe>
+                </div>
             </section>
             <a class="page-footer__logo" href="#">
                 <img class="page-footer__image" width="128" height="24" src="/img/logo-footer.svg"
