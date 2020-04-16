@@ -5,6 +5,10 @@
   font-size: 16px;
   line-height: 1.1;
   text-transform: uppercase;
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
 }
 
 .field__input {
@@ -17,3 +21,7 @@
   text-transform: uppercase;
 }
 
+.field__input--comments {
+  margin: 0;
+  padding: 12px;
+}

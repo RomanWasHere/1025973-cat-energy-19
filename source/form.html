@@ -42,7 +42,7 @@
             <p class="profile__description">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
             <form class="form profile__form" action="" method="GET">
                 <div class="form__wrapper">
-                    <fieldset class="form__group">
+                    <fieldset class="form__group ">
                         <legend class="visually-hidden">Информация о питомце</legend>
                         <label class="field" for="name">
                             Имя:*
@@ -58,22 +58,24 @@
                             <input class="field__input" type="number" name="age" id="age" placeholder="7">
                         </label>
                     </fieldset>
-                    <fieldset class="form__group">
+                    <fieldset class="form__group form__group--radio">
                         <legend class="visually-hidden">Выбор программы</legend>
-                        <label class="control control--radio" for="diet">
+                        <label class="control" for="diet">
                             Похудение
-                            <input class="control__input" type="radio" name="program" id="diet" checked>
+                            <input class="control__input control__input--radio" type="radio" name="program" id="diet"
+                                checked>
                         </label>
-                        <label class="control control--radio" for="gain">
+                        <label class="control" for="gain">
                             Набор Массы
-                            <input class="control__input" type="radio" name="program" id="gain">
+                            <input class="control__input control__input--radio" type="radio" name="program" id="gain">
                         </label>
-                        <label class="control control--radio" for="unknown">
+                        <label class="control" for="unknown">
                             Не знаю (Нужен ваш совет)
-                            <input class="control__input" type="radio" name="program" id="unknown">
+                            <input class="control__input control__input--radio" type="radio" name="program"
+                                id="unknown">
                         </label>
                     </fieldset>
-                    <fieldset class="form__group">
+                    <fieldset class="form__group form__group--contacts">
                         <legend class="form__subtitle">Контактные данные
                             (владельца кота)</legend>
                         <label class="field" for="email">
@@ -90,33 +92,37 @@
                     <fieldset class="form__group">
                         <legend class="form__subtitle">Комментарий</legend>
                         <label class="field" for="comments">
-                            <textarea class="field__input" name="comments" id="comments" cols="30" rows="10"
+                            <textarea class="field__input field__input--comments" name="comments" id="comments" cols="30" rows="10"
                                 placeholder="Расскажите обо всех повадках кота"></textarea>
                         </label>
                     </fieldset>
-                    <fieldset class="form__group">
+                    <fieldset class="form__group form__group--checkbox">
                         <legend class="form__subtitle">Дополнительно</legend>
-                        <label class="control control--checkbox" for="sugar">
-                            <input class="control__input" type="checkbox" name="sugar" id="sugar" checked>
+                        <label class="control" for="sugar">
+                            <input class="control__input control__input--checkbox" type="checkbox" name="sugar"
+                                id="sugar" checked>
                             Сахарозаменитель
                         </label>
-                        <label class="control control--checkbox" for="water">
-                            <input class="control__input" type="checkbox" name="water" id="water">
+                        <label class="control" for="water">
+                            <input class="control__input control__input--checkbox" type="checkbox" name="water"
+                                id="water">
                             Питьевая вода
                         </label>
-                        <label class="control control--checkbox" for="milk">
-                            <input class="control__input" type="checkbox" name="milk" id="milk">
+                        <label class="control" for="milk">
+                            <input class="control__input control__input--checkbox" type="checkbox" name="milk"
+                                id="milk">
                             Молоко
                         </label>
-                        <label class="control control--checkbox" for="vitamins">
-                            <input class="control__input" type="checkbox" name="vitamins" id="vitamins">
+                        <label class="control" for="vitamins">
+                            <input class="control__input control__input--checkbox" type="checkbox" name="vitamins"
+                                id="vitamins">
                             Витамины
                         </label>
                     </fieldset>
                     <div class="form__controls">
-                        <button class="form__button" type="submit">Отправить заявку</button>
+                        <button class="button form__button" type="submit">Отправить заявку</button>
                     </div>
-                    <p class="footnote">
+                    <p class="form__footnote">
                         * — Обязательные поля
                     </p>
                 </div>
