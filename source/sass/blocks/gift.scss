@@ -8,8 +8,12 @@
   min-width: 280px;
   min-height: 289px;
   padding: 60px 60px 40px 60px;
+  background-color: $dark-green-color;
   background-image: url("/img/gift-photo-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   text-decoration: none;
+  background-size: cover;
 }
 
 .gift__text {
@@ -26,10 +30,11 @@
   &::before {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 60px;
+    top: 20%;
+    left: 50%;
     width: 56px;
     height: 61px;
+    transform: translate(-50%, -50%);
     background-image: url("/img/icon-gift.svg");
     background-position: center;
     background-repeat: no-repeat;

@@ -1,6 +1,7 @@
 // ------------------------------------------ //
 // 01 GLOBAL
 // ------------------------------------------ //
+@import "global/base.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
@@ -33,16 +34,3 @@
 // 03 LIBRARIES
 // ------------------------------------------ //
 @import "libs/normalize.scss";
-
-// ------------------------------------------ //
-// 04 STYLES
-// ------------------------------------------ //
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "oswald-regular", "Helvetica", "Arial", sans-serif;
-}
