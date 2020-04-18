@@ -1,3 +1,7 @@
+.contacts__wrapper {
+  width: 100%;
+}
+
 .contacts__info-block {
   display: flex;
   justify-content: space-between;
@@ -7,11 +11,6 @@
   padding-bottom: 25px;
   padding-left: 20px;
   background-color: $white-color;
-}
-
-.contacts__wrapper {
-  margin-right: -20px;
-  margin-left: -20px;
 }
 
 .contacts__title {

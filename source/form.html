@@ -61,20 +61,20 @@
                     </fieldset>
                     <fieldset class="form__group form__group--radio">
                         <legend class="visually-hidden">Выбор программы</legend>
-                        <div class="control">
+                        <div class="control control--radio">
                             <label class="control__label" for="diet">
                                 Похудение
                             </label>
                             <input class="control__input control__input--radio" type="radio" name="program" id="diet"
                                 checked>
                         </div>
-                        <div class="control">
+                        <div class="control control--radio">
                             <label class="control__label" for="gain">
                                 Набор Массы
                             </label>
                             <input class="control__input control__input--radio" type="radio" name="program" id="gain">
                         </div>
-                        <div class="control">
+                        <div class="control control--radio">
                             <label class="control__label" for="unknown">
                                 Не знаю (Нужен ваш совет)
                             </label>
@@ -83,7 +83,7 @@
                         </div>
                     </fieldset>
                     <fieldset class="form__group form__group--contacts">
-                        <legend class="form__subtitle">Контактные данные
+                        <legend class="form__subtitle">Контактные данные<br>
                             (владельца кота)</legend>
                         <div class="field">
                             <label class="field__label" for="email">
@@ -111,28 +111,28 @@
                     </fieldset>
                     <fieldset class="form__group form__group--checkbox">
                         <legend class="form__subtitle">Дополнительно</legend>
-                        <div class="control">
+                        <div class="control control--checkbox">
                             <input class="control__input control__input--checkbox" type="checkbox" name="sugar"
                                 id="sugar" checked>
                             <label class="control__label" for="sugar">
                                 Сахарозаменитель
                             </label>
                         </div>
-                        <div class="control">
+                        <div class="control control--checkbox">
                             <input class="control__input control__input--checkbox" type="checkbox" name="water"
                                 id="water">
                             <label class="control__label" for="water">
                                 Питьевая вода
                             </label>
                         </div>
-                        <div class="control">
+                        <div class="control control--checkbox">
                             <input class="control__input control__input--checkbox" type="checkbox" name="milk"
                                 id="milk">
                             <label class="control__label" for="milk">
                                 Молоко
                             </label>
                         </div>
-                        <div class="control">
+                        <div class="control control--checkbox">
                             <input class="control__input control__input--checkbox" type="checkbox" name="vitamins"
                                 id="vitamins">
                             <label class="control__label" for="vitamins">
@@ -154,26 +154,26 @@
     </main>
 
     <footer class="page-footer">
-        <div class="page-footer__wrapper">
-            <section class="contacts page-footer__contacts">
-                <div class="contacts__wrapper">
-                    <div class="contacts__info-block">
-                        <p class="contacts__title">
-                            приглашаем<br>
-                            к сотрудничеству<br>
-                            дилеров!
-                        </p>
-                        <address class="contacts__text">
-                            ул. Большая<br>
-                            Конюшенная 19/8<br>
-                            Санкт-Петербург
-                        </address>
-                    </div>
-                    <div class="contacts__map-block">
-                        <iframe class="contacts__map" src="" frameborder="0"></iframe>
-                    </div>
+        <section class="contacts page-footer__contacts">
+            <div class="contacts__wrapper">
+                <div class="contacts__info-block">
+                    <p class="contacts__title">
+                        приглашаем<br>
+                        к сотрудничеству<br>
+                        дилеров!
+                    </p>
+                    <address class="contacts__text">
+                        ул. Большая<br>
+                        Конюшенная 19/8<br>
+                        Санкт-Петербург
+                    </address>
                 </div>
-            </section>
+            </div>
+            <div class="contacts__map-block">
+                <iframe class="contacts__map" src="" frameborder="0"></iframe>
+            </div>
+        </section>
+        <div class="page-footer__wrapper">
             <a class="page-footer__logo" href="#">
                 <img class="page-footer__image" width="128" height="24" src="/img/logo-footer.svg"
                     alt="Логотип Кэт Энерджи">

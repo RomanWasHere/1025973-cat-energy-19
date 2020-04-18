@@ -4,39 +4,39 @@
 }
 
 .gift__link {
+  position: relative;
   display: block;
   min-width: 280px;
   min-height: 289px;
   padding: 60px 60px 40px 60px;
+  padding-top: 200px;
   background-color: $dark-green-color;
   background-image: url("/img/gift-photo-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   text-decoration: none;
   background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 56px;
+    height: 61px;
+    background-image: url("/img/icon-gift.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .gift__text {
   @include arial-font;
-  position: relative;
   margin: 0;
-  padding-top: 130px;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
   color: $white-color;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 56px;
-    height: 61px;
-    transform: translate(-50%, -50%);
-    background-image: url("/img/icon-gift.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 }

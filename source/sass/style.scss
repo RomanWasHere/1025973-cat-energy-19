@@ -1,13 +1,18 @@
 // ------------------------------------------ //
-// 01 GLOBAL
+// 01 LIBRARIES
 // ------------------------------------------ //
-@import "global/base.scss";
+@import "libs/normalize.scss";
+
+// ------------------------------------------ //
+// 02 GLOBAL
+// ------------------------------------------ //
 @import "global/fonts.scss";
+@import "global/base.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
 
 // ------------------------------------------ //
-// 02 BLOCKS
+// 03 BLOCKS
 // ------------------------------------------ //
 @import "blocks/button.scss";
 @import "blocks/visually-hidden.scss";
@@ -29,8 +34,3 @@
 @import "blocks/form.scss";
 @import "blocks/field.scss";
 @import "blocks/control.scss";
-
-// ------------------------------------------ //
-// 03 LIBRARIES
-// ------------------------------------------ //
-@import "libs/normalize.scss";
