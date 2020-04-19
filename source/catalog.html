@@ -19,20 +19,20 @@
                 </a>
             </div>
             <button type="button" class="page-header__toggle">Открыть меню</button>
-            <nav class="site-nav site-nav--closed">
-                <ul class="site-nav__list">
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="index.html">Главная</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link site-nav__item--activе">Каталог продукции</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="form.html">Подбор программы</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
+        <nav class="site-nav site-nav--closed">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link site-nav__item--activе">Каталог продукции</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="form.html">Подбор программы</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main class="page-main">
@@ -40,7 +40,9 @@
 
         <section class="main-catalog">
             <div class="main-catalog__wrapper">
-                <h2 class="main-catalog__title">Каталог продукции</h2>
+                <div class="main-catalog__header-wrapper">
+                    <h2 class="main-catalog__title">Каталог продукции</h2>
+                </div>
                 <ul class="main-catalog__list">
                     <li class="main-catalog__item">
                         <article class="product">
@@ -365,10 +367,7 @@
             </div>
         </article>
 
-    </main>
-
-    <footer class="page-footer">
-        <section class="contacts page-footer__contacts">
+        <section class="contacts contacts--grey">
             <div class="contacts__info-block">
                 <div class="contacts__wrapper">
                     <p class="contacts__title">
@@ -387,6 +386,10 @@
                 <iframe class="contacts__map" src="" frameborder="0"></iframe>
             </div>
         </section>
+
+    </main>
+
+    <footer class="page-footer">
         <div class="page-footer__wrapper">
             <a class="page-footer__logo" href="#">
                 <img class="page-footer__image" width="128" height="24" src="/img/logo-footer.svg"

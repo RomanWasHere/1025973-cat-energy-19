@@ -1,73 +1,78 @@
 .control {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 30px;
-  padding-left: 40px;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+  &__label {
+    position: relative;
+    display: inline-block;
+    padding: 6px 0;
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
 
-  &--form {
-    margin-bottom: 12px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      transition: 0.2s;
+    }
 
-    &:last-child {
-      margin-bottom: 0;
+    &::before {
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $grey-darker-color;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &--radio {
+    .control__label {
+      &::before {
+        border-radius: 50%;
+      }
+
+      &::after {
+        top: 9px;
+        left: 9px;
+        width: 12px;
+        height: 12px;
+        background-color: $primary-color;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &--checkbox {
+    .control__label {
+      &::after {
+        top: 4px;
+        left: 4px;
+        width: 22px;
+        height: 22px;
+        background-image: url("/img/icon-tick.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
 
 .control__input {
-  appearance: none;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  border: 1px solid $grey-darker-color;
-  cursor: pointer;
-}
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 
-// ------------------------------------------ //
-// RADIO STYLES START
-// ------------------------------------------ //
-.control__input--radio {
-  border-radius: 50%;
-}
-
-.control__input--radio:checked {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 12px;
-    height: 12px;
-    background-color: $primary-color;
-    border-radius: 50%;
+  &:checked ~ .control__label {
+    &::after {
+      opacity: 1;
+    }
   }
 }
-// ------------------------------------------ //
-// RADIO STYLES END
-// ------------------------------------------ //
-
-
-// ------------------------------------------ //
-// CHECKBOX STYLES START
-// ------------------------------------------ //
-.control__input--checkbox:checked {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 22px;
-    height: 17px;
-    background-image: url("/img/icon-tick.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-// ------------------------------------------ //
-// CHECKBOX STYLES END
-// ------------------------------------------ //

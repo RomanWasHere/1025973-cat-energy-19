@@ -1,25 +1,28 @@
 .field {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  line-height: 1.1;
-  text-transform: uppercase;
 
-  &--form {
-    margin-bottom: 14px;
-
-    &:last-child {
-      margin-bottom: 0;
+  &--textarea {
+    .field__input {
+      min-height: 42px;
+      padding: 12px;
+      resize: vertical;
     }
   }
 }
 
-.field__input {
-  flex-grow: 1;
-  margin-left: 16px;
-  padding: 16px;
+.field__label {
+  margin-right: 16px;
   font-size: 16px;
   line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.field__input {
+  flex-grow: 1;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 18px;
   border: 1px solid $grey-darker-color;
   text-transform: uppercase;
 
@@ -27,9 +30,3 @@
     border-color: $darker-grey-color;
   }
 }
-
-.field__input--comments {
-  margin: 0;
-  padding: 12px;
-}
-

@@ -23,12 +23,17 @@
 .site-nav__item {
   padding: 24px 20px;
   font-size: 20px;
+  line-height: 20px;
   text-align: center;
   border-bottom: 1px solid $grey-color;
   text-transform: uppercase;
 
   &:first-child {
     border-top: 1px solid $grey-color;
+  }
+
+  &:last-child {
+    border: none;
   }
 }
 

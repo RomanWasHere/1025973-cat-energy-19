@@ -1,5 +1,9 @@
 .contacts {
   background-color: $white-color;
+
+  &--grey {
+    background-color: $grey-color;
+  }
 }
 
 .contacts__info-block {
