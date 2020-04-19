@@ -1,13 +1,16 @@
 .field {
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
   font-size: 16px;
   line-height: 1.1;
   text-transform: uppercase;
 
-  &:last-child {
-    margin-bottom: 24px;
+  &--form {
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -21,7 +24,7 @@
   text-transform: uppercase;
 
   &:focus {
-    border: $darker-grey-color;
+    border-color: $darker-grey-color;
   }
 }
 
@@ -29,3 +32,4 @@
   margin: 0;
   padding: 12px;
 }
+

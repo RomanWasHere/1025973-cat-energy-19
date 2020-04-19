@@ -77,6 +77,12 @@
   display: none;
 }
 
+.example__controls-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .example__button {
   font-size: 16px;
   line-height: 20px;

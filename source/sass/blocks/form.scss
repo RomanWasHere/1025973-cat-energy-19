@@ -1,27 +1,24 @@
 .form__group {
-  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  padding-left: 20px;
   border: none;
 }
 
-.form__group--radio {
-  margin-right: -20px;
-  margin-bottom: 30px;
-  margin-left: -20px;
+.form__group--options {
+  margin-bottom: 20px;
   padding: 20px;
   border-top: 1px solid $greyer-color;
   border-bottom: 1px solid $greyer-color;
 }
 
-.form__group--checkbox {
-  margin-bottom: 30px;
-}
-
 .form__subtitle {
-  margin-bottom: 30px;
+  position: relative;
+  margin-bottom: 20px;
   padding-right: 24px;
   font-size: 24px;
   line-height: 1;
@@ -39,6 +36,11 @@
     height: 3px;
     background-color: $primary-color;
   }
+}
+
+.form__controls {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .form__button {

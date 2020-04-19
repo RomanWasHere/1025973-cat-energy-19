@@ -1,8 +1,5 @@
-.program {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 20px;
-  background-color: $grey-color;
+.programs {
+  margin-bottom: 20px;
 }
 
 .programs__wrapper {
@@ -21,6 +18,13 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  background-color: $grey-color;
 }
 
 .program__title {
