@@ -19,4 +19,12 @@
     pointer-events: none;
     cursor: not-allowed;
   }
+
+  &:hover {
+    background-color: $dark-green-color;
+  }
+
+  &:active {
+    color: $text-active-white;
+  }
 }

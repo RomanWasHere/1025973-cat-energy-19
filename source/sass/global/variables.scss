@@ -3,9 +3,17 @@
 // ------------------------------------------ //
 $white-color: #ffffff;
 $black-color: #111111;
+$darker-black-color: #222222;
 $grey-color: #f2f2f2;
 $grey-darker-color: #cdcdcd;
+$greyer-color: #ededed;
 $dark-grey-color: #666666;
 $darker-grey-color: #444444;
 $primary-color: #68b738;
 $dark-green-color: #5eaa2f;
+
+// ------------------------------------------ //
+// 02 STATES
+// ------------------------------------------ //
+$text-active-white: rgba(255, 255, 255, 0.3);
+$text-active-grey: rgba(17, 17, 17, 0.3);

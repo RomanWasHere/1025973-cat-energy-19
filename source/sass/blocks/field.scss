@@ -1,0 +1,32 @@
+.field {
+  display: flex;
+  align-items: center;
+
+  &--textarea {
+    .field__input {
+      min-height: 42px;
+      padding: 12px;
+      resize: vertical;
+    }
+  }
+}
+
+.field__label {
+  margin-right: 16px;
+  font-size: 16px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.field__input {
+  flex-grow: 1;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid $grey-darker-color;
+  text-transform: uppercase;
+
+  &:focus {
+    border-color: $darker-grey-color;
+  }
+}

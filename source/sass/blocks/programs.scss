@@ -1,3 +1,7 @@
+.programs {
+  margin-bottom: 20px;
+}
+
 .programs__wrapper {
   padding-top: 20px;
   padding-right: 20px;
@@ -82,11 +86,13 @@
   font-size: 14px;
   line-height: 1.3;
   color: $darker-grey-color;
-  border-bottom: 1px solid $dark-grey-color;
+  border-bottom: 1px solid $grey-darker-color;
 }
 
 .program__link {
   position: relative;
+  min-width: 130px;
+  margin-right: auto;
   color: $black-color;
   text-transform: uppercase;
   text-decoration: none;
@@ -99,5 +105,9 @@
     width: 25px;
     height: 12px;
     background: url("/img/icon-right-arrow-long.svg");
+  }
+
+  &:active {
+    color: $text-active-grey;
   }
 }

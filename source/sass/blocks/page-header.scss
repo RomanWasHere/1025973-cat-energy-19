@@ -1,4 +1,5 @@
 .page-header {
+  padding-top: 10px;
   border-bottom: 1px solid $grey-color;
 }
 
@@ -7,18 +8,22 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
 }
 
-.page-haeder__logo-block {
-  padding: 10px 54px 10px 20px;
+.page-header__logo {
+  display: block;
+  height: auto;
 }
 
 .page-header__toggle {
   width: 24px;
   height: 18px;
-  margin: 10px 20px 10px 10px;
-  background: url("/img/icon-mobile-menu.svg");
-  text-indent: -9999px;
+  font-size: 0;
+  background-color: $white-color;
+  background-image: url("/img/icon-mobile-menu.svg");
   border: none;
   overflow: hidden;
 }
