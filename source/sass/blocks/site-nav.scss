@@ -44,3 +44,36 @@
     color: $black-color;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .site-nav {
+    width: auto;
+
+    &--closed {
+      display: block;
+    }
+  }
+
+  .site-nav__list {
+    display: flex;
+  }
+
+  .site-nav__item {
+    font-size: 18px;
+    line-height: 1.4;
+    border: none;
+  }
+
+  .site-nav__link--activе {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background-color: #68b738;
+    }
+  }
+}

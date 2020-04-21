@@ -13,15 +13,18 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" width="191" height="39" src="/img/logo-mobile.svg"
-          alt="Логотип Кэт Энерджи">
+        <picture>
+          <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
+          <img class="page-header__logo-image" width="191" height="39" src="/img/logo-mobile.svg"
+            alt="Логотип Кэт Энерджи">
+        </picture>
       </a>
       <button type="button" class="page-header__toggle">Открыть меню</button>
     </div>
     <nav class="site-nav site-nav--closed">
       <ul class="site-nav__list">
-        <li class="site-nav__item site-nav__item--activе">
-          <a class="site-nav__link">Главная</a>
+        <li class="site-nav__item">
+          <a class="site-nav__link site-nav__link--activе">Главная</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="catalog.html ">Каталог продукции</a>
@@ -41,8 +44,11 @@
           <h1 class="hero__title">Функциональное<br> питание для котов</h1>
           <p class="hero__subtitle">Занялся собой? Займись котом!</p>
         </div>
-        <img class="hero__image" width="320" height="305" src="/img/index-can-mobile@1x.png"
-          alt="Изображение продукта Кэт Энерджи 500г со вкусом курицы">
+        <picture>
+          <source media="min-width:768px" srcset="/img/index-can-tablet@1x.jpg">
+          <img class="hero__image" width="320" height="305" src="/img/index-can-mobile@1x.png"
+            alt="Изображение продукта Кэт Энерджи 500г со вкусом курицы">
+        </picture>
         <div class="hero__controls">
           <a class="button hero__link" href="form.html">Подобрать программу</a>
         </div>

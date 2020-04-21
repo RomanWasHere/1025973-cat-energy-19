@@ -27,3 +27,21 @@
   border: none;
   overflow: hidden;
 }
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    display: flex;
+    padding-top: 0;
+    border-bottom: none;
+  }
+
+  .page-header__wrapper {
+    margin-right: auto;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}

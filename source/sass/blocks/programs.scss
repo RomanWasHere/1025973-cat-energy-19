@@ -111,3 +111,9 @@
     color: $text-active-grey;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .program {
+    padding: 55px 55px;
+  }
+}

@@ -44,3 +44,57 @@
   padding-right: 20px;
   padding-left: 20px;
 }
+
+
+@media (min-width: $tablet-width) {
+  .hero {
+    margin-bottom: 529px;
+  }
+
+  .hero__text-block {
+    min-height: auto;
+    margin-bottom: 48px;
+    background-color: transparent;
+    background-image: none;
+  }
+
+  .hero__wrapper {
+    position: relative;
+    align-items: flex-start;
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+
+  .hero__title {
+    margin-bottom: 32px;
+    font-size: 60px;
+    text-align: left;
+    color: $black-color;
+  }
+
+  .hero__subtitle {
+    font-size: 20px;
+    text-align: left;
+    color: $black-color;
+  }
+
+  .hero__image {
+    position: absolute;
+    top: 226px;
+    z-index: -1;
+    width: auto;
+    height: 609px;
+    margin: 0;
+  }
+
+  .hero__controls {
+    width: auto;
+    padding: 0;
+  }
+
+  .hero__link {
+    padding: 16px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
