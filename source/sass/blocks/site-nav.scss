@@ -39,10 +39,7 @@
 
 .site-nav__link {
   text-decoration: none;
-
-  &:visited {
-    color: $black-color;
-  }
+  color: $black-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -59,6 +56,10 @@
   }
 
   .site-nav__item {
+    padding: 0;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 25px;
     font-size: 18px;
     line-height: 1.4;
     border: none;

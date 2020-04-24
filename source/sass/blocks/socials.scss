@@ -48,3 +48,14 @@
     background-image: url("/img/icon-fb.svg");
   }
 }
+
+
+@media (min-width: $tablet-width) {
+  .socials {
+    border: none;
+  }
+
+  .socials__link {
+    background-size: 23px 23px;
+  }
+}
