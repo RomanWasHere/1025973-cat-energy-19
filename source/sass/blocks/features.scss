@@ -155,3 +155,36 @@
     line-height: 1.5;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .features {
+    @include desktop-layout;
+    margin-bottom: 140px;
+  }
+
+  .features__wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .features__item {
+    flex-direction: row;
+    width: calc((100% - (85px * 3)) / 4);
+    margin-right: 85px;
+    margin-bottom: 0;
+    padding-top: 100px;
+    padding-left: 0;
+
+    &:nth-child(even) {
+      margin-right: 85px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

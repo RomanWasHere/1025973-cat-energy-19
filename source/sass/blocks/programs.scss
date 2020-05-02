@@ -182,3 +182,62 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .programs {
+    @include desktop-layout;
+    margin-bottom: 50px;
+  }
+
+  .programs__wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .programs__list {
+    display: flex;
+  }
+
+  .programs__item {
+    width: 50%;
+    margin-right: 80px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .program__title {
+    height: 100px;
+    padding-left: 154px;
+
+    &::before {
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        top: -6px;
+        left: 16px;
+        width: 71px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 24px;
+        left: -18px;
+        width: 134px;
+        height: 57px;
+      }
+    }
+  }
+
+  .program__description {
+    padding-right: 0;
+  }
+}

@@ -90,3 +90,9 @@
   border: none;
   text-transform: uppercase;
 }
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    @include desktop-layout;
+  }
+}

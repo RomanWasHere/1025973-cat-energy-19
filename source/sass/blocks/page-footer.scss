@@ -67,3 +67,9 @@
     color: $darker-grey-color;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    @include desktop-layout;
+  }
+}

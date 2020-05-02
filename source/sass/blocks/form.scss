@@ -31,12 +31,12 @@
   &::after {
     content: "";
     position: absolute;
-    top: calc(1em / 2 + 3px); // Line-height / 2(center) + height
+    top: 0;
     left: 0;
     z-index: -1;
-    display: inline-block;
-    width: calc(100vw - 20px);
+    width: 100vw;
     height: 3px;
+    margin-top: calc(1em / 2 + 3px);
     background-color: $primary-color;
   }
 }
@@ -74,4 +74,124 @@
   line-height: 1;
   text-align: center;
   color: $darker-grey-color;
+}
+
+@media (min-width: $tablet-width) {
+  .form__group {
+    margin-bottom: 70px;
+    padding-right: 70px;
+    padding-bottom: 0;
+    padding-left: 70px;
+
+    &--border {
+      border: none;
+    }
+
+    &--extra {
+      margin-bottom: 18px;
+    }
+  }
+
+  .form__wrapper {
+    padding: 28px 28px;
+    border: 1px solid $grey-darker-color;
+
+    &--checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  .form__subtitle {
+    margin-bottom: 70px;
+    margin-left: -40px;
+    padding-right: 37px;
+    padding-left: 37px;
+    font-size: 36px;
+    line-height: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100%;
+      z-index: -1;
+      width: 100vw;
+      height: 3px;
+      margin-top: calc(1em / 2 + 3px);
+      background-color: $primary-color;
+    }
+  }
+
+  .form__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  .form__button {
+    width: calc(50% - 30px);
+    margin-bottom: 0;
+  }
+
+  .form__footnote {
+    width: calc(50% - 30px);
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__wrapper {
+    &--contact-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      border: none;
+    }
+  }
+
+  .form__group {
+    width: calc(50% - 40px);
+    padding-right: 0;
+    padding-left: 30px;
+
+    &--contact-info {
+      width: 100%;
+    }
+
+    &--comments {
+      width: 100%;
+    }
+
+    &--extra {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+  }
+
+  .form__controls {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 30px;
+  }
+
+  .form__field {
+    &--email,
+    &--phone {
+      width: calc(50% - 40px);
+    }
+  }
 }

@@ -98,3 +98,23 @@
     line-height: 20px;
   }
 }
+
+
+@media (min-width: $desktop-width) {
+  .hero {
+    @include desktop-layout;
+    margin-bottom: 340px;
+  }
+
+  .hero__text-block {
+    z-index: -1;
+    padding-top: 80px;
+    background-color: $dark-green-color;
+    background-image: url("/img/index-background-desktop@1x.jpg");
+  }
+
+  .hero__image {
+    top: 30px;
+    right: 70px;
+  }
+}

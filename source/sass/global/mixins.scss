@@ -7,3 +7,11 @@
 @mixin arial-font {
   font-family: "Arial", "Helvetica", sans-serif;
 }
+
+@mixin desktop-layout {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 110px;
+  padding-left: 110px;
+  max-width: 1440px;
+}

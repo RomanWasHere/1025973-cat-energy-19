@@ -76,3 +76,22 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .control {
+    &--checkbox {
+      width: calc(50% - 30px);
+      margin-bottom: 36px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .control {
+    &--checkbox {
+      width: calc((100% - 80px*3)/4);
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+}
