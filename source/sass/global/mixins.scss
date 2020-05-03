@@ -9,9 +9,8 @@
 }
 
 @mixin desktop-layout {
-  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
-  padding-right: 110px;
-  padding-left: 110px;
-  max-width: 1440px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
