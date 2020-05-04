@@ -12,29 +12,31 @@
 
     <header class="page-header">
         <div class="page-header__wrapper">
-            <a class="page-header__logo" href="#">
-                <picture>
-                    <source media="(min-width: 1200px)" srcset="/img/logo-desktop.svg">
-                    <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
-                    <img class="page-header__logo-image" width="191" height="39" src="/img/logo-mobile.svg"
-                        alt="Логотип Кэт Энерджи">
-                </picture>
-            </a>
-            <button type="button" class="page-header__toggle">Открыть меню</button>
+            <div class="page-header__top">
+                <a class="page-header__logo" href="#">
+                    <picture class="page-header__logo-picture">
+                        <source media="(min-width: 1200px)" srcset="/img/logo-desktop.svg">
+                        <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
+                        <img class="page-header__logo-image" width="191" height="39" src="/img/logo-mobile.svg"
+                            alt="Логотип Кэт Энерджи">
+                    </picture>
+                </a>
+                <button type="button" class="page-header__toggle">Открыть меню</button>
+            </div>
+            <nav class="page-header__site-nav site-nav site-nav--closed">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="catalog.html">Каталог продукции</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--activе">Подбор программы</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav class="site-nav site-nav--closed">
-            <ul class="site-nav__list">
-                <li class="site-nav__item">
-                    <a class="site-nav__link" href="index.html ">Главная</a>
-                </li>
-                <li class="site-nav__item">
-                    <a class="site-nav__link" href="catalog.html">Каталог продукции</a>
-                </li>
-                <li class="site-nav__item">
-                    <a class="site-nav__link site-nav__link--activе">Подбор программы</a>
-                </li>
-            </ul>
-        </nav>
     </header>
 
     <main class="page-main">

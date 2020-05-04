@@ -91,11 +91,9 @@
     line-height: 1.25;
   }
 
-  .site-nav__link {
+  .site-nav__link--white {
     color: $white-color;
-  }
 
-  .site-nav__link--activе {
     &::before {
       background-color: $white-color;
     }
