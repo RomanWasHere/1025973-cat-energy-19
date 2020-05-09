@@ -29,15 +29,17 @@
 }
 
 .example__subtitle {
+  margin-top: 0;
   font-size: 14px;
   line-height: 1.4;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .example__list {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 26px;
 }
 
 .example__facts-block {
@@ -89,6 +91,37 @@
   background: none;
   border: none;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: $white-color;
+    border-top: 1px solid $greyer-color;
+  }
+
+  .example__wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 1;
+    text-transform: none;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .example__value {
+    background-color: $white-color;
+  }
+
+  .example__preview {
+    background-color: $grey-color;
+  }
 }
 
 @media (min-width: $desktop-width) {

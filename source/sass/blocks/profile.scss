@@ -49,4 +49,8 @@
   .profile__wrapper {
     @include desktop-layout;
   }
+
+  .profile__header {
+    padding-left: 0;
+  }
 }

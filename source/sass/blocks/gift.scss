@@ -1,11 +1,4 @@
-.gift {
-  margin-bottom: 35px;
-}
 
-.gift__wrapper {
-  padding-right: 20px;
-  padding-left: 20px;
-}
 
 .gift__link {
   position: relative;
@@ -43,4 +36,21 @@
   line-height: 1.25;
   text-align: center;
   color: $white-color;
+}
+
+@media (min-width: $tablet-width) {
+  .gift__link {
+    background-image: url("/img/gift-photo-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gift__link {
+    width: 245px;
+    min-width: auto;
+    height: 289px;
+    min-height: auto;
+    padding-top: 180px;
+    background-image: url("/img/gift-photo-desktop@1x.jpg");
+  }
 }

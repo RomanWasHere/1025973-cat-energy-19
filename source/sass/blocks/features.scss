@@ -130,12 +130,16 @@
     }
 
     &--usage {
+      margin-bottom: 0;
+
       &::after {
         content: "3";
       }
     }
 
     &--result {
+      margin-bottom: 0;
+
       &::after {
         content: "4";
       }
