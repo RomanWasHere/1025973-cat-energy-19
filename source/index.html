@@ -108,34 +108,39 @@
     </section>
 
     <section class="example">
-      <div class="example__wrapper">
-        <div class="example__info-block">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-            часов в день. </p>
-          <dl class="example__list">
-            <div class="example__facts-block">
-              <dt class="example__property">5 кг</dt>
-              <dd class="example__value">снижение <br> веса</dd>
+      <h2 class="example__title">Живой пример</h2>
+      <div class="example__inner">
+        <div class="example__wrapper">
+          <div class="example__info-block">
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+              Slim.
+              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+              часов в день. </p>
+            <dl class="example__list">
+              <div class="example__facts-block">
+                <dt class="example__property">5 кг</dt>
+                <dd class="example__value">снижение веса</dd>
+              </div>
+              <div class="example__facts-block">
+                <dt class="example__property">60 дней</dt>
+                <dd class="example__value">затрачено времени</dd>
+              </div>
+            </dl>
+            <p class="example__subtitle">Затраты на питание: 15 000 руб.</p>
+          </div>
+          <div class="example__preview">
+            <picture class="example__picture">
+              <source media="(min-width:1200px)" srcset="/img/before-desktop@1x.png">
+              <source media="(min-width:768px)" srcset="/img/before-tablet@1x.png">
+              <img class="example__image example__image--before" width="311" height="232px"
+                src="/img/before-mobile@1x.png" alt="Изображение до диеты Кэт Энерджи">
+            </picture>
+            <div class="example__controls-wrapper">
+              <button class="example__button" type="button">Было</button>
+              <input class="example__range" type="range" name="range" id="range" min="0" max="10">
+              <button class="example__button" type="button">Стало</button>
             </div>
-            <div class="example__facts-block">
-              <dt class="example__property">60 дней</dt>
-              <dd class="example__value">затрачено <br> времени</dd>
-            </div>
-          </dl>
-          <p class="example__subtitle">Затраты на питание: 15 000 руб.</p>
-        </div>
-      </div>
-      <div class="example__preview">
-        <img class="example__image example__image--before" width="311" height="232px" src="img/before-mobile@1x.png"
-          alt="Изображение до диеты Кэт Энерджи">
-        <img class="example__image example__image--after" src="https://via.placeholder.com/200x200"
-          alt="Изображение после диеты Кэт Энерджи">
-        <div class="example__controls-wrapper">
-          <button class="example__button" type="button">Было</button>
-          <input class="example__range" type="range" name="range" id="range" min="0" max="10">
-          <button class="example__button" type="button">Стало</button>
+          </div>
         </div>
       </div>
     </section>
@@ -156,7 +161,9 @@
         </div>
       </div>
       <div class="contacts__map-block">
-        <iframe class="contacts__map" src="" frameborder="0"></iframe>
+        <iframe class="contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6093681422744!2d30.321197516093264!3d59.93862388187607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2sBolshaya%20Konyushennaya%20St%2C%2018%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1589127733582!5m2!1sen!2sru"
+          width="600" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </section>
   </main>
@@ -184,6 +191,7 @@
   </footer>
 
   <script src="/js/mobile-toggle.js"></script>
+  <script src="/js/picturefill.js" async></script>
 
 </body>
 
