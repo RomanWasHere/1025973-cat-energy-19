@@ -2,6 +2,11 @@
   padding-top: 20px;
 }
 
+.main-catalog__header-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .main-catalog__title {
   margin-top: 0;
   font-weight: normal;
@@ -28,6 +33,8 @@
 
   .main-catalog__header-wrapper {
     margin-bottom: 70px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .main-catalog__title {
