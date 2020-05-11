@@ -39,7 +39,7 @@
         </div>
     </header>
 
-    <main class="page-main">
+    <main class="page-main page-main--overflow">
         <h1 class="visually-hidden">Функциональное питание для котов</h1>
         <section class="profile">
             <div class="profile__wrapper">
@@ -67,7 +67,7 @@
                     </fieldset>
                     <fieldset class="form__group form__group--border form__group--program">
                         <legend class="visually-hidden">Выбор программы</legend>
-                        <div class="form__wrapper">
+                        <div class="form__wrapper form__wrapper--radio">
                             <div class="control control--radio form__control">
                                 <input class="control__input" type="radio" name="program" id="diet" checked>
                                 <label class="control__label" for="diet">Похудение</label>
@@ -90,14 +90,14 @@
                                 <label class="field__label" for="email">
                                     E-mail:*
                                 </label>
-                                <input class="field__input" type="email" name="program" id="email"
+                                <input class="field__input field__input--email" type="email" name="program" id="email"
                                     placeholder="kuklachev@gmail.com" required>
                             </div>
                             <div class="field form__field form__field--phone">
                                 <label class="field__label" for="phone">
                                     Телефон:*
                                 </label>
-                                <input class="field__input" type="tel" name="program" id="phone"
+                                <input class="field__input field__input--tel" type="tel" name="program" id="phone"
                                     placeholder="8 (960) 900-60-90" required>
                             </div>
                         </div>

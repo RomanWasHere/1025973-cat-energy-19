@@ -161,6 +161,10 @@
       padding: 0;
       border: none;
     }
+
+    &--radio {
+      height: 184px;
+    }
   }
 
   .form__group {
@@ -189,9 +193,17 @@
   }
 
   .form__field {
-    &--email,
+    &--email {
+      width: calc(50% - 40px);
+      margin-bottom: 0;
+    }
+
     &--phone {
       width: calc(50% - 40px);
     }
+  }
+
+  .control--radio {
+    margin-bottom: 20px;
   }
 }
