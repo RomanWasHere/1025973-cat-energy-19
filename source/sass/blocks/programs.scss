@@ -64,6 +64,8 @@
       width: 35px;
       height: 49px;
       background: url("/img/icon-cat-slim.svg");
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 
@@ -74,6 +76,8 @@
       width: 67px;
       height: 28px;
       background: url("/img/icon-cat-pro.svg");
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -109,5 +113,131 @@
 
   &:active {
     color: $text-active-grey;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs {
+    margin-bottom: 50px;
+  }
+
+  .programs__wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .program {
+    padding: 55px 55px;
+  }
+
+  .program__title {
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 1;
+
+    &::before {
+      right: 0;
+      left: auto;
+      width: 200px;
+      height: 200px;
+    }
+
+    &::after {
+      right: 0;
+      left: auto;
+    }
+
+    &--slim {
+      &::after {
+        top: -12px;
+        right: 30px;
+        width: 141px;
+        height: 194px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 44px;
+        right: -30px;
+        width: 268px;
+        height: 113px;
+      }
+    }
+  }
+
+  .program__description {
+    padding-right: 270px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: none;
+  }
+
+  .program__link {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      left: 118px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs {
+    @include desktop-layout;
+    margin-bottom: 50px;
+  }
+
+  .programs__wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .programs__list {
+    display: flex;
+  }
+
+  .programs__item {
+    width: 50%;
+    margin-right: 80px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .program__title {
+    height: 100px;
+    padding-left: 154px;
+
+    &::before {
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        top: -6px;
+        left: 16px;
+        width: 71px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 24px;
+        left: -18px;
+        width: 134px;
+        height: 57px;
+      }
+    }
+  }
+
+  .program__description {
+    padding-right: 0;
   }
 }
