@@ -78,6 +78,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .features {
+    margin-bottom: 105px;
+  }
+
   .features__wrapper {
     padding-right: 30px;
     padding-left: 30px;
@@ -149,9 +153,9 @@
       margin-right: 0;
     }
 
-    &:last-child {
-      margin-bottom: 90px;
-    }
+    // &:last-child {
+    //   margin-bottom: 90px;
+    // }
   }
 
   .features__description {

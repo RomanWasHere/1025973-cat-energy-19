@@ -27,3 +27,39 @@
     color: $text-active-white;
   }
 }
+
+.button-range {
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+
+  &--before {
+    margin-right: 20px;
+  }
+
+  &--after {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button-range {
+    &--before,
+    &--after {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        width: 100%;
+        height: 1px;
+        background-color: $grey-darker-color;
+      }
+    }
+  }
+}

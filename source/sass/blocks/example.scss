@@ -28,12 +28,26 @@
   color: $darker-grey-color;
 }
 
-.example__subtitle {
+.example__price-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 0;
+  margin-bottom: 44px;
   font-size: 14px;
   line-height: 1.4;
   text-align: center;
   text-transform: uppercase;
+}
+
+
+.example__spent,
+.example__amount {
+  margin: 0;
+}
+
+.example__spent {
+  margin-right: 4px;
 }
 
 .example__list {
@@ -78,14 +92,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.example__button {
-  font-size: 16px;
-  line-height: 20px;
-  background: none;
-  border: none;
-  text-transform: uppercase;
 }
 
 .example__preview {
@@ -165,13 +171,19 @@
     text-transform: none;
   }
 
-  .example__subtitle {
+  .example__price-block {
+    flex-wrap: wrap;
+    justify-content: flex-end;
     margin-bottom: 0;
     margin-left: auto;
     font-size: 20px;
     line-height: 1;
-    max-width: 195px;
     text-align: right;
+    max-width: 195px;
+  }
+
+  .example__spent {
+    margin-right: 0;
   }
 
   .example__text {
@@ -286,13 +298,17 @@
     max-width: 430px;
   }
 
+  .example__spent {
+    margin-right: 64px;
+  }
+
   .example__title {
     margin-bottom: 66px;
     padding-right: 0;
     padding-left: 0;
   }
 
-  .example__subtitle {
+  .example__price-block {
     margin-left: initial;
     text-align: center;
     max-width: initial;
@@ -317,7 +333,6 @@
 
   .example__demo {
     &--before {
-      width: 52%;
       box-shadow: -1000px 1170px 0 1000px $grey-color;
 
       &::after {

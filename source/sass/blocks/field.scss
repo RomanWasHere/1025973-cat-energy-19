@@ -30,3 +30,74 @@
     border-color: $darker-grey-color;
   }
 }
+
+.field-input__range {
+  width: 84px;
+  height: 14px;
+  background: $white-color;
+  border: 1px solid $grey-darker-color;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+
+  // Chrome, Safari, Opera, Safari etc.
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 35px;
+    height: 6px;
+    background: $primary-color;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  // Firefox
+  &::-moz-range-thumb {
+    width: 35px;
+    height: 6px;
+    background: $primary-color;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field-input__range {
+    position: relative;
+    width: 428px;
+    height: 3px;
+    background-color: $grey-darker-color;
+
+    &::-webkit-slider-thumb {
+      width: 34px;
+      height: 34px;
+      background: radial-gradient(circle, rgba(104, 183, 48, 1) 20%, rgba(255, 255, 255, 1) 21%);
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &::-moz-range-thumb {
+      width: 34px;
+      height: 34px;
+      background: radial-gradient(circle, rgba(104, 183, 48, 1) 20%, rgba(255, 255, 255, 1) 21%);
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-input__range {
+    height: 6px;
+
+    &::-webkit-slider-thumb {
+      border: 1px solid $grey-darker-color;
+    }
+
+    &::-moz-range-thumb {
+      border: 1px solid $grey-darker-color;
+    }
+  }
+}
