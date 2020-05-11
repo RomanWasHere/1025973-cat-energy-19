@@ -69,6 +69,38 @@
   }
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .features__item {
+    &--consistency {
+      &::before {
+        background-image: url("/img/advantage-leaf@2x.png");
+        background-size: 50px 50px;
+      }
+    }
+
+    &--package {
+      &::before {
+        background-image: url("/img/advantage-powder@2x.png");
+        background-size: 50px 50px;
+      }
+    }
+
+    &--usage {
+      &::before {
+        background-image: url("/img/advantage-dining@2x.png");
+        background-size: 50px 50px;
+      }
+    }
+
+    &--result {
+      &::before {
+        background-image: url("/img/advantage-clock@2x.png");
+        background-size: 50px 50px;
+      }
+    }
+  }
+}
+
 .features__description {
   @include arial-font;
   margin: 0;
