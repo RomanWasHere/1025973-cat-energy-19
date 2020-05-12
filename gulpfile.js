@@ -29,6 +29,9 @@ var include = require("posthtml-include");
 /* Пакет для локального сервера */
 var server = require("browser-sync").create();
 
+/* Пакет для удаления файлов и папок */
+var del = require("del");
+
 // ------------------------------------------ //
 // 02 ТАСКИ
 // ------------------------------------------ //
@@ -80,16 +83,17 @@ gulp.task("sprite", function () {
 /* Таска на вставку спрайта в HTML */
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-    .pipe(posthtml({
+    .pipe(posthtml([
       include()
-    }))
+    ]))
     .pipe(gulp.dest("source"));
 });
 
 /* Таска для локального сервера */
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
+    // server: "source/",
     notify: false,
     open: true,
     cors: true,
@@ -97,19 +101,42 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{sass,scss}", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh")).on("change", server.reload);
+
+  gulp.task("refresh", function (done) {
+    server.reload();
+    done();
+  });
 });
 
+/* Таска на копирование файлов в "build" */
+gulp.task("copy", function () {
+  return gulp.src([
+    "source/fonts/**/*.{woff, woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
+});
+
+/* Таска на очистку "build" */
+gulp.task("clean", function () {
+  return del("build");
+});
 
 // ------------------------------------------ //
 // 03 СЕРИИ ТАСОК
 // ------------------------------------------ //
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("start", gulp.series("build", "server"));
 
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 
 /* TODO:
-1 - SVG
 2 - Билд
 3 - Webp -> в отдельный <picture type="image/webp"></picture>
 */

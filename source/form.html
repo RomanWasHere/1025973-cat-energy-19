@@ -40,6 +40,9 @@
     </header>
 
     <main class="page-main page-main--overflow">
+        <div style="display: none;">
+            <include src="source/img/sprite.svg"></include>
+        </div>
         <h1 class="visually-hidden">Функциональное питание для котов</h1>
         <section class="profile">
             <div class="profile__wrapper">
@@ -179,10 +182,25 @@
             </a>
             <div class="socials page-footer__socials">
                 <ul class="socials__list">
-                    <li class="socials__item"><a href="#" class="socials__link socials__link--vk">Вконтаке</a></li>
-                    <li class="socials__item"><a href="#" class="socials__link socials__link--instagram">Инстаграм</a>
+                    <li class="socials__item"><a href="#" class="socials__link">
+                            <svg class="socials__icon socials__icon--vk" role="img" width="23" height="23">
+                                <use xlink:href="img/sprite.svg#icon-vk">
+                            </svg>
+                            Вконтаке
+                        </a></li>
+                    <li class="socials__item"><a href="#" class="socials__link">
+                            <svg class="socials__icon socials__icon--insta" role="img" width="23" height="23">
+                                <use xlink:href="img/sprite.svg#icon-insta">
+                            </svg>
+                            Инстаграм
+                        </a>
                     </li>
-                    <li class="socials__item"><a href="#" class="socials__link socials__link--facebook">Фейсбук</a></li>
+                    <li class="socials__item"><a href="#" class="socials__link">
+                            <svg class="socials__icon socials__icon--fb" role="img" width="23" height="23">
+                                <use xlink:href="img/sprite.svg#icon-fb">
+                            </svg>
+                            Фейсбук
+                        </a></li>
                 </ul>
             </div>
             <div class="page-footer__copyright">

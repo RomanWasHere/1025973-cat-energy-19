@@ -25,28 +25,13 @@
 }
 
 .socials__link {
-  position: relative;
   display: block;
   width: 35px;
   height: 35px;
   font-size: 0;
-  background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
   white-space: nowrap;
-  background-size: 19px 19px;
-
-  &--vk {
-    background-image: url("/img/icon-vk.svg");
-  }
-
-  &--instagram {
-    background-image: url("/img/icon-insta.svg");
-  }
-
-  &--facebook {
-    background-image: url("/img/icon-fb.svg");
-  }
+  color: $dark-grey-color;
 }
 
 
