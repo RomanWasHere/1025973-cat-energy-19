@@ -48,7 +48,7 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
@@ -103,19 +103,21 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{sass,scss}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh")).on("change", server.reload);
+});
 
-  gulp.task("refresh", function (done) {
-    server.reload();
-    done();
-  });
+/* Таска для обновления сервера */
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
 });
 
 /* Таска на копирование файлов в "build" */
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff, woff2}",
+    "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
+    "source/*.html",
     "source/*.ico"
   ], {
     base: "source"
@@ -132,11 +134,13 @@ gulp.task("clean", function () {
 // 03 СЕРИИ ТАСОК
 // ------------------------------------------ //
 
-gulp.task("start", gulp.series("build", "server"));
-
+/* Серия тасок на сборку проекта */
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 
+/* Серия тасок для разработки */
+gulp.task("start", gulp.series("build", "server"));
+
+
 /* TODO:
-2 - Билд
 3 - Webp -> в отдельный <picture type="image/webp"></picture>
 */
