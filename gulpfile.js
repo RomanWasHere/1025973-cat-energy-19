@@ -86,7 +86,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("source"));
+    .pipe(gulp.dest("build"));
 });
 
 /* Таска для локального сервера */

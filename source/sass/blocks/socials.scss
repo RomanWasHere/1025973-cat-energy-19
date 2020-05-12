@@ -31,7 +31,10 @@
   font-size: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: $dark-grey-color;
+}
+
+.socials__icon {
+  fill: $dark-grey-color;
 }
 
 
