@@ -22,6 +22,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .profile {
+    padding-top: 60px;
+  }
+
   .profile__header {
     margin-bottom: 70px;
     padding: 0 30px;
@@ -42,6 +46,10 @@
 
 
 @media (min-width: $desktop-width) {
+  .profile {
+    padding-top: 80px;
+  }
+
   .profile__description {
     padding-left: 0;
   }

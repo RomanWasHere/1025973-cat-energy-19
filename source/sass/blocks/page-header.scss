@@ -19,6 +19,14 @@
 
 .page-header__logo {
   margin-right: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__toggle {

@@ -32,6 +32,12 @@ var server = require("browser-sync").create();
 /* Пакет для удаления файлов и папок */
 var del = require("del");
 
+/* Пакет для минификации JS файлов */
+var uglify = require('gulp-uglify');
+
+/* Пакет для минификации HTML файлов */
+var htmlmin = require('gulp-htmlmin');
+
 // ------------------------------------------ //
 // 02 ТАСКИ
 // ------------------------------------------ //
@@ -130,17 +136,26 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+/* Таска на сжатие JS файлов */
+gulp.task("scripts", function () {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js/"));
+});
+
+/* Таска на сжатие HTML файлов */
+gulp.task("minify-html", function () {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+});
+
 // ------------------------------------------ //
 // 03 СЕРИИ ТАСОК
 // ------------------------------------------ //
 
 /* Серия тасок на сборку проекта */
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "scripts", "sprite", "html", "minify-html"));
 
 /* Серия тасок для разработки */
 gulp.task("start", gulp.series("build", "server"));
-
-
-/* TODO:
-3 - Webp -> в отдельный <picture type="image/webp"></picture>
-*/

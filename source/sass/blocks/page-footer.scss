@@ -15,12 +15,21 @@
   height: 24px;
   margin: 0 auto;
   margin-bottom: 30px;
+
+  :hover {
+    opacity: 0.8;
+  }
+
+  :active {
+    opacity: 0.6;
+  }
 }
 
-.page-footer__logo-image {
-  display: block;
-  width: 128px;
-  height: 24px;
+.page-footer__icon {
+  fill: inherit;
+  width: 27px;
+  height: 34px;
+  margin-left: auto;
 }
 
 .page-footer__copyright {
@@ -33,9 +42,22 @@
 
 .page-footer__copyright-link {
   @include arial-font;
+  display: flex;
+  align-items: center;
+  width: 100%;
   font-size: 16px;
   color: $darker-grey-color;
   text-decoration: none;
+  fill: $dark-grey-color;
+
+  &:hover {
+    opacity: 0.8;
+    fill: $primary-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__copyright-image {
@@ -62,8 +84,7 @@
   }
 
   .page-footer__copyright-link {
-    min-width: 115px;
-    margin-right: 23px;
+    min-width: 162px;
     color: $darker-grey-color;
   }
 }
