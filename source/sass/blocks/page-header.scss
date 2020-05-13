@@ -42,6 +42,10 @@
   background-repeat: no-repeat;
   border: none;
   background-size: 24px 18px;
+
+  &--opened {
+    background-image: url("/img/icon-close.svg");
+  }
 }
 
 @media (min-width: $tablet-width) {

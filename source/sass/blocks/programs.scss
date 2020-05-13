@@ -109,10 +109,18 @@
     width: 25px;
     height: 12px;
     background: url("/img/icon-right-arrow-long.svg");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &:active {
-    color: $text-active-grey;
+    opacity: 0.3;
+  }
+
+  &:hover::after {
+    width: 34px;
+    background: url("/img/icon-right-arrow-verylong.svg");
+    transition: 0.4s all;
   }
 }
 

@@ -98,7 +98,6 @@
   appearance: none;
   outline: none;
 
-  // Chrome, Safari, Opera, Safari etc.
   &::-webkit-slider-thumb {
     appearance: none;
     width: 35px;
@@ -108,7 +107,6 @@
     border-radius: 3px;
   }
 
-  // Firefox
   &::-moz-range-thumb {
     width: 35px;
     height: 6px;
@@ -141,6 +139,24 @@
       background-color: transparent;
       border-radius: 50%;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &::-webkit-slider-thumb:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &::-moz-range-thumb:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &::-webkit-slider-thumb:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      border: 2px solid $primary-color;
+    }
+
+    &::-moz-range-thumb:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      border: 2px solid $primary-color;
     }
   }
 }
