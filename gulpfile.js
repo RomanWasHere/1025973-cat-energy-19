@@ -110,7 +110,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{sass,scss}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh")).on("change", server.reload);
-  gulp.watch("source/js/**/*.js").on("change", server.reload);
+  gulp.watch("source/js/**/*.js", gulp.series("scripts")).on("change", server.reload);
 });
 
 /* Таска для обновления сервера */
@@ -141,13 +141,12 @@ gulp.task("clean", function () {
 gulp.task("scripts", function () {
   return gulp.src("source/js/**/*.js")
     .pipe(sourcemap.init())
-    .pipe(concat("concat.js"))
+    .pipe(concat("scripts.js"))
     .pipe(rename("scripts.min.js"))
     .pipe(uglify())
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest("build/js/"));
 });
-
 
 /* Таска на сжатие HTML файлов */
 gulp.task("minify-html", function () {
