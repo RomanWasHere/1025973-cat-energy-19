@@ -22,7 +22,7 @@
 
 .form__subtitle {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   padding-right: 24px;
   font-size: 24px;
   line-height: 1;
@@ -63,6 +63,7 @@
 }
 
 .form__button {
+  width: 100%;
   margin-bottom: 24px;
 }
 
@@ -77,6 +78,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .form {
+    margin-bottom: 0;
+  }
+
   .form__group {
     margin-bottom: 70px;
     padding-right: 70px;

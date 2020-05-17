@@ -32,6 +32,13 @@ var server = require("browser-sync").create();
 /* Пакет для удаления файлов и папок */
 var del = require("del");
 
+/* Пакет для минификации и объединения JS файлов */
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+
+/* Пакет для минификации HTML файлов */
+var htmlmin = require('gulp-htmlmin');
+
 // ------------------------------------------ //
 // 02 ТАСКИ
 // ------------------------------------------ //
@@ -65,7 +72,7 @@ gulp.task("images", function () {
 
 /* Таска на конвертацию изображений в WebP */
 gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png, jpg}")
+  return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp())
     .pipe(gulp.dest("source/img"));
 });
@@ -103,6 +110,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{sass,scss}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh")).on("change", server.reload);
+  gulp.watch("source/js/**/*.js", gulp.series("scripts")).on("change", server.reload);
 });
 
 /* Таска для обновления сервера */
@@ -116,7 +124,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source/*.html",
     "source/*.ico"
   ], {
@@ -130,17 +137,30 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+/* Таска на сжатие JS файлов */
+gulp.task("scripts", function () {
+  return gulp.src("source/js/**/*.js")
+    .pipe(sourcemap.init())
+    .pipe(concat("scripts.js"))
+    .pipe(rename("scripts.min.js"))
+    .pipe(uglify())
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest("build/js/"));
+});
+
+/* Таска на сжатие HTML файлов */
+gulp.task("minify-html", function () {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+});
+
 // ------------------------------------------ //
 // 03 СЕРИИ ТАСОК
 // ------------------------------------------ //
 
 /* Серия тасок на сборку проекта */
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "scripts", "sprite", "html", "minify-html"));
 
 /* Серия тасок для разработки */
 gulp.task("start", gulp.series("build", "server"));
-
-
-/* TODO:
-3 - Webp -> в отдельный <picture type="image/webp"></picture>
-*/

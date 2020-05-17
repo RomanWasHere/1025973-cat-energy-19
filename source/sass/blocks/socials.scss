@@ -25,7 +25,9 @@
 }
 
 .socials__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 35px;
   height: 35px;
   font-size: 0;
@@ -35,6 +37,30 @@
 
 .socials__icon {
   fill: $dark-grey-color;
+
+  &:hover {
+    opacity: 0.8;
+    fill: $primary-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--vk {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--insta {
+    width: 17px;
+    height: 17px;
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+  }
 }
 
 
@@ -43,7 +69,20 @@
     border: none;
   }
 
-  .socials__link {
-    background-size: 23px 23px;
+  .socials__icon {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

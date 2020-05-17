@@ -12,7 +12,7 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header__top">
-        <a class="page-header__logo" href="#">
+        <a class="page-header__logo" href="index.html">
           <picture class="page-header__logo-picture">
             <source media="(min-width: 1200px)" srcset="/img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
@@ -20,9 +20,9 @@
               alt="Логотип Кэт Энерджи">
           </picture>
         </a>
-        <button type="button" class="page-header__toggle">Открыть меню</button>
+        <button type="button" class="page-header__toggle page-header__toggle--closed">Открыть меню</button>
       </div>
-      <nav class="page-header__site-nav site-nav site-nav--closed">
+      <nav class="page-header__site-nav site-nav site-nav--closed site-nav--nojs">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link site-nav__link--white site-nav__link--activе">Главная</a>
@@ -52,6 +52,11 @@
         </div>
         <div class="hero__picture-wrapper">
           <picture class="hero__picture">
+            <source type="image/webp" media="(min-width:1200px)"
+              srcset="/img/index-can-desktop@1x.webp, /img/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width:768px)"
+              srcset="/img/index-can-tablet@1x.webp, /img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="/img/index-can-mobile@1x.webp, /img/index-can-mobile@2x.webp 2x">
             <source media="(min-width:1200px)" srcset="/img/index-can-desktop@1x.png, /img/index-can-desktop@2x.png 2x">
             <source media="(min-width:768px)" srcset="/img/index-can-tablet@1x.jpg, /img/index-can-tablet@2x.jpg 2x">
             <img class="hero__image" width="320" height="305" src="/img/index-can-mobile@1x.png"
@@ -138,14 +143,24 @@
             <div class="example__demo-wrapper">
               <div class="example__demo example__demo--before">
                 <picture class="example__picture">
+                  <source type="image/webp" media="(min-width:1200px)"
+                    srcset="/img/before-desktop@1x.webp, /img/before-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width:768px)"
+                    srcset="/img/before-tablet@1x.webp, /img/before-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="/img/before-mobile@1x.webp, /img/before-mobile@2x.webp 2x">
                   <source media="(min-width:1200px)" srcset="/img/before-desktop@1x.png, /img/before-desktop@2x.png 2x">
                   <source media="(min-width:768px)" srcset="/img/before-tablet@1x.png, /img/before-tablet@2x.png 2x">
-                  <img class="example__image" src="/img/before-mobile@1x.png" srcsetc="/img/before-mobile@2x.png 2x"
+                  <img class="example__image" src="/img/before-mobile@1x.png" srcset="/img/before-mobile@2x.png 2x"
                     alt="Изображение до диеты Кэт Энерджи">
                 </picture>
               </div>
               <div class="example__demo example__demo--after">
                 <picture class="example__picture">
+                  <source type="image/webp" media="(min-width:1200px)"
+                    srcset="/img/after-desktop@1x.webp, /img/after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width:768px)"
+                    srcset="/img/after-tablet@1x.webp, /img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="/img/after-mobile@1x.webp, /img/after-tablet@2x.webp 2x">
                   <source media="(min-width:1200px)" srcset="/img/after-desktop@1x.png, /img/after-desktop@2x.png 2x">
                   <source media="(min-width:768px)" srcset="/img/after-tablet@1x.png, /img/after-tablet@2x.png 2x">
                   <img class="example__image" src="/img/after-mobile@1x.png" srcset="/img/after-mobile@2x.png 2x"
@@ -164,6 +179,7 @@
     </section>
 
     <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__wrapper">
         <div class="contacts__info-block">
           <p class="contacts__title">
@@ -178,17 +194,14 @@
           </address>
         </div>
       </div>
-      <div class="contacts__map-block">
-        <iframe class="contacts__map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6093681422744!2d30.321197516093264!3d59.93862388187607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2sBolshaya%20Konyushennaya%20St%2C%2018%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1589127733582!5m2!1sen!2sru"
-          width="600" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <div class="contacts__map-block map" id="map">
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo" href="#">
+      <a class="page-footer__logo" href="index.html">
         <img class="page-footer__logo-image" width="128" height="24" src="/img/logo-footer.svg"
           alt="Логотип Кэт Энерджи">
       </a>
@@ -219,18 +232,19 @@
         </ul>
       </div>
       <div class="page-footer__copyright">
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
+          <svg class="page-footer__icon" role="img" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy">
+            </use>
+          </svg>
         </a>
-        <img class="page-footer__copyright-image" width="27" height="34" src="/img/htmlacademy.svg"
-          alt="Логотип HTML Academy">
       </div>
     </div>
   </footer>
 
-  <script src="/js/mobile-toggle.js"></script>
-  <script src="/js/picturefill.js" async=""></script>
-  <script src="/js/svg4everybody.js" async=""></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="/js/scripts.min.js"></script>
 
 </body>
 

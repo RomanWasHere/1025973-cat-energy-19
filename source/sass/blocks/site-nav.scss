@@ -1,4 +1,6 @@
 .site-nav {
+  display: none;
+
   &--closed {
     display: none;
   }
@@ -39,6 +41,24 @@
   padding: 24px 20px;
   text-decoration: none;
   color: $black-color;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-nav__link--activе {
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 @media (min-width: $tablet-width) {

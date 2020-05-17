@@ -46,7 +46,20 @@
 
 @media (min-width: $tablet-width) {
   .gift__link {
+    min-height: 200px;
+    padding: 65px 120px 65px 90px;
     background-image: url("/img/gift-photo-tablet@1x.jpg");
+
+    &::before {
+      top: 50%;
+      left: 17%;
+    }
+  }
+
+  .gift__text {
+    width: 165px;
+    margin-left: auto;
+    padding-top: 6px;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -58,12 +71,26 @@
 
 @media (min-width: $desktop-width) {
   .gift__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     width: 245px;
     min-width: auto;
     height: 289px;
     min-height: auto;
-    padding-top: 180px;
+    padding: 40px;
     background-image: url("/img/gift-photo-desktop@1x.jpg");
+
+    &::before {
+      top: 35%;
+      left: 50%;
+    }
+  }
+
+  .gift__text {
+    min-height: 56px;
+    padding-top: 0;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
