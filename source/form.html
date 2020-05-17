@@ -13,15 +13,15 @@
     <header class="page-header">
         <div class="page-header__wrapper">
             <div class="page-header__top">
-                <a class="page-header__logo" href="#">
+                <a class="page-header__logo" href="index.html">
                     <picture class="page-header__logo-picture">
                         <source media="(min-width: 1200px)" srcset="/img/logo-desktop.svg">
                         <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
-                        <img class="page-header__logo-image" width="191" height="39" src="/img/logo-mobile.svg"
+                        <img class="page-header__logo-image" src="/img/logo-mobile.svg"
                             alt="Логотип Кэт Энерджи">
                     </picture>
                 </a>
-                <button type="button" class="page-header__toggle">Открыть меню</button>
+                <button type="button" class="page-header__toggle page-header__toggle--closed">Открыть меню</button>
             </div>
             <nav class="page-header__site-nav site-nav site-nav--closed">
                 <ul class="site-nav__list">
@@ -51,7 +51,7 @@
                     <p class="profile__description">Заполните анкету и мы подберем <br> программу питания для вашего
                         кота</p>
                 </div>
-                <form class="form profile__form" action="" method="GET">
+                <form class="form profile__form" action="#" method="GET">
                     <fieldset class="form__group form__group--border form__group--cat">
                         <legend class="visually-hidden">Информация о питомце</legend>
                         <div class="field form__field">
@@ -169,7 +169,8 @@
         </section>
 
         <section class="contacts contacts--grey">
-            <div class="contacts__wrapper contacts__wrapper--form">
+            <h2 class="visually-hidden">Контакты</h2>
+            <div class="contacts__wrapper">
                 <div class="contacts__info-block">
                     <p class="contacts__title">
                         приглашаем<br>
@@ -183,15 +184,14 @@
                     </address>
                 </div>
             </div>
-            <div class="contacts__map-block">
-                <iframe class="contacts__map" src="" frameborder="0"></iframe>
+            <div class="contacts__map-block map" id="map">
             </div>
         </section>
     </main>
 
     <footer class="page-footer">
         <div class="page-footer__wrapper">
-            <a class="page-footer__logo" href="#">
+            <a class="page-footer__logo" href="index.html">
                 <img class="page-footer__logo-image" width="128" height="24" src="/img/logo-footer.svg"
                     alt="Логотип Кэт Энерджи">
             </a>
@@ -222,7 +222,7 @@
                 </ul>
             </div>
             <div class="page-footer__copyright">
-                <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
+                <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
                     HTML Academy
                     <svg class="page-footer__icon" role="img" width="27" height="34">
                         <use xlink:href="img/sprite.svg#icon-htmlacademy">
@@ -233,11 +233,8 @@
         </div>
     </footer>
 
-
-    <script src="/js/picturefill.js"></script>
-    <script src="/js/svg4everybody.js"></script>
-    <script src="/js/libs.js"></script>
-    <script src="/js/mobile-toggle.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="/js/scripts.min.js"></script>
 
 </body>
 

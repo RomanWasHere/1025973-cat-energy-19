@@ -72,7 +72,7 @@ gulp.task("images", function () {
 
 /* Таска на конвертацию изображений в WebP */
 gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png, jpg}")
+  return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp())
     .pipe(gulp.dest("source/img"));
 });
