@@ -12,13 +12,6 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  &--disabled {
-    color: $darker-grey-color;
-    background-color: $grey-color;
-    pointer-events: none;
-    cursor: not-allowed;
-  }
-
   &:hover {
     background-color: $dark-green-color;
   }
@@ -26,6 +19,13 @@
   &:active {
     color: $text-active-white;
   }
+}
+
+.button--disabled {
+  color: $darker-grey-color;
+  background-color: $grey-color;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .button-range {
@@ -36,30 +36,28 @@
   border: none;
   text-transform: uppercase;
   outline: none;
+}
 
-  &--before {
-    margin-right: 20px;
-  }
+.button-range--before {
+  margin-right: 20px;
+}
 
-  &--after {
-    margin-left: 20px;
-  }
+.button-range--after {
+  margin-left: 20px;
 }
 
 @media (min-width: $desktop-width) {
-  .button-range {
-    &--before,
-    &--after {
-      position: relative;
+  .button-range--before,
+  .button-range--after {
+    position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -4px;
-        width: 100%;
-        height: 1px;
-        background-color: $grey-darker-color;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background-color: $grey-darker-color;
     }
   }
 }

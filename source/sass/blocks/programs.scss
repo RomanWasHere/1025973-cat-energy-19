@@ -184,9 +184,14 @@
   .program__link {
     font-size: 20px;
     line-height: 20px;
+    margin-right: initial;
+    padding-right: 50px;
+    display: inline-block;
 
     &::after {
-      left: 118px;
+      left: auto;
+      right: 5px;
+      top: 5px;
     }
   }
 }

@@ -162,7 +162,8 @@
     &--contact-controls {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      flex-wrap: wrap;
+      align-items: flex-start;
       padding: 0;
       border: none;
     }
